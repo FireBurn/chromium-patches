@@ -1,0 +1,25 @@
+From b5fc895ed39b038d0a5ab530edebf6318e20bb1f Mon Sep 17 00:00:00 2001
+From: Mike Lothian <mike@fireburn.co.uk>
+Date: Mon, 8 Jun 2020 15:12:26 +0100
+Subject: [PATCH] Fix bluetooth
+
+---
+ device/bluetooth/dbus/fake_bluetooth_device_client.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/device/bluetooth/dbus/fake_bluetooth_device_client.h b/device/bluetooth/dbus/fake_bluetooth_device_client.h
+index b46715b5a665..b77ae6c27ccd 100644
+--- a/device/bluetooth/dbus/fake_bluetooth_device_client.h
++++ b/device/bluetooth/dbus/fake_bluetooth_device_client.h
+@@ -384,7 +384,7 @@ class DEVICE_BLUETOOTH_EXPORT FakeBluetoothDeviceClient
+   bool delay_start_discovery_;
+ 
+   // Pending prepare write requests.
+-  std::vector<std::tuple<dbus::ObjectPath, std::vector<uint8_t>, std::string>>
++  std::vector<std::tuple<dbus::ObjectPath, std::vector<uint8_t>, base::StringPiece>>
+       prepare_write_requests_;
+ 
+   bool should_leave_connections_pending_;
+-- 
+2.27.0
+
