@@ -1,0 +1,39 @@
+From 5408c143545e52f4e3b10620ec2bfe1940416949 Mon Sep 17 00:00:00 2001
+From: Mike Lothian <mike@fireburn.co.uk>
+Date: Wed, 10 Jun 2020 07:29:44 +0100
+Subject: [PATCH 3/6] Missing includes
+
+---
+ components/federated_learning/sim_hash.cc | 1 +
+ components/federated_learning/sim_hash.h  | 2 ++
+ 2 files changed, 3 insertions(+)
+
+diff --git a/components/federated_learning/sim_hash.cc b/components/federated_learning/sim_hash.cc
+index 3624459f3383..8012adfbbe26 100644
+--- a/components/federated_learning/sim_hash.cc
++++ b/components/federated_learning/sim_hash.cc
+@@ -7,6 +7,7 @@
+ #include "base/hash/legacy_hash.h"
+ 
+ #include <algorithm>
++#include <cmath>
+ 
+ namespace federated_learning {
+ 
+diff --git a/components/federated_learning/sim_hash.h b/components/federated_learning/sim_hash.h
+index 55030d9d2e3f..2e6775c4c565 100644
+--- a/components/federated_learning/sim_hash.h
++++ b/components/federated_learning/sim_hash.h
+@@ -5,7 +5,9 @@
+ #ifndef COMPONENTS_FEDERATED_LEARNING_SIM_HASH_H_
+ #define COMPONENTS_FEDERATED_LEARNING_SIM_HASH_H_
+ 
++#include <cstdint>
+ #include <set>
++#include <string>
+ #include <unordered_set>
+ 
+ namespace federated_learning {
+-- 
+2.27.0
+
