@@ -1,0 +1,25 @@
+From a7c095385801aad2745e38a210b41a25d4722d09 Mon Sep 17 00:00:00 2001
+From: Mike Lothian <mike@fireburn.co.uk>
+Date: Wed, 10 Jun 2020 14:42:13 +0100
+Subject: [PATCH 3/3] Add include
+
+---
+ media/gpu/vp9_reference_frame_vector.cc | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/media/gpu/vp9_reference_frame_vector.cc b/media/gpu/vp9_reference_frame_vector.cc
+index dc279980ebac..d560c7295cc0 100644
+--- a/media/gpu/vp9_reference_frame_vector.cc
++++ b/media/gpu/vp9_reference_frame_vector.cc
+@@ -6,6 +6,8 @@
+ 
+ #include "media/gpu/vp9_picture.h"
+ 
++#include <bitset>
++
+ namespace media {
+ 
+ Vp9ReferenceFrameVector::Vp9ReferenceFrameVector() {
+-- 
+2.27.0
+
