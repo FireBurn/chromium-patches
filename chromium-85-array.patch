@@ -1,0 +1,24 @@
+From 4e510243b809859fab8c2ed9dcc8d6c84f04eb49 Mon Sep 17 00:00:00 2001
+From: Mike Lothian <mike@fireburn.co.uk>
+Date: Sat, 13 Jun 2020 09:27:33 +0100
+Subject: [PATCH] Add array include
+
+---
+ content/common/content_navigation_policy.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/content/common/content_navigation_policy.h b/content/common/content_navigation_policy.h
+index b5d76ae4812a..e7d1aaedd765 100644
+--- a/content/common/content_navigation_policy.h
++++ b/content/common/content_navigation_policy.h
+@@ -7,6 +7,7 @@
+ 
+ #include "content/common/content_export.h"
+ 
++#include <array>
+ #include <string>
+ 
+ namespace content {
+-- 
+2.27.0
+
