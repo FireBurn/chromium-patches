@@ -1,0 +1,39 @@
+From 9e66a951325d01532490a5d487e24f2377a58f77 Mon Sep 17 00:00:00 2001
+From: Mike Lothian <mike@fireburn.co.uk>
+Date: Thu, 18 Jun 2020 02:12:13 +0100
+Subject: [PATCH] Include memory
+
+---
+ components/policy/core/common/management/management_service.cc | 2 ++
+ components/policy/core/common/management/management_service.h  | 2 ++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/components/policy/core/common/management/management_service.cc b/components/policy/core/common/management/management_service.cc
+index cf71cb501642..8d120fc5b89a 100644
+--- a/components/policy/core/common/management/management_service.cc
++++ b/components/policy/core/common/management/management_service.cc
+@@ -6,6 +6,8 @@
+ 
+ #include "base/containers/flat_map.h"
+ 
++#include <memory>
++
+ namespace policy {
+ 
+ namespace {
+diff --git a/components/policy/core/common/management/management_service.h b/components/policy/core/common/management/management_service.h
+index 6696baf29f28..8bf17e994577 100644
+--- a/components/policy/core/common/management/management_service.h
++++ b/components/policy/core/common/management/management_service.h
+@@ -8,6 +8,8 @@
+ #include "base/containers/flat_set.h"
+ #include "components/policy/policy_export.h"
+ 
++#include <memory>
++
+ namespace policy {
+ 
+ class ScopedManagementServiceOverrideForTesting;
+-- 
+2.27.0
+
